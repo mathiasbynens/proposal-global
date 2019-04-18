@@ -64,7 +64,7 @@ The distinction is observable in the following scenario, with files `parent.html
   // The global variable `foo` exists.
   console.assert(frame.foo === 'a');
   const before = frame.getGlobalThis();
-  frame.src = 'b.html';
+  frame.src = 'frame-b.html';
   frame.onload = () => {
     // The global variable `foo` has disappeared.
     console.assert(frame.foo === undefined);
